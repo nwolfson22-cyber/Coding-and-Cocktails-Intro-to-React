@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 // list of facts about me
 const personalFacts = [
@@ -10,6 +11,9 @@ const personalFacts = [
 ];
 const FactGenerator = () => {
     const [currentFact, setCurrentFact] = useState('');
+            useEffect(() => {
+            console.log('My fact:', currentFact);}, 
+            [currentFact]);
         const generateRandomFact = () => {
         if (personalFacts.length > 0) {
             const randomIndex = Math.floor(Math.random() * personalFacts.length);
@@ -23,7 +27,7 @@ const FactGenerator = () => {
             <button 
                 onClick={generateRandomFact}
                 disabled={personalFacts.length === 0}
-                className="fact-button" 
+                className="fact-button"
             >
                 Show Me A Fun Fact!
             </button>
