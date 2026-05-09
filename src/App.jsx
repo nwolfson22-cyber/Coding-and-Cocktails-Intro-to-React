@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import WelcomeHeader from './WelcomeHeader';'./App.css';
 
 function App() {
   return (
