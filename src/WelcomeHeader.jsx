@@ -1,4 +1,5 @@
 import React from 'react';
+import FactGenerator from './FactGenerator';
 
 const WelcomeHeader = () => {
     return (
@@ -8,3 +9,5 @@ const WelcomeHeader = () => {
     </header>        
     );
 };
+
+export default WelcomeHeader;
