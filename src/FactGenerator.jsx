@@ -10,7 +10,6 @@ const personalFacts = [
 ];
 const FactGenerator = () => {
     const [currentFact, setCurrentFact] = useState('');
-
     const generateRandomFact = () => {
         if (personalFacts.length > 0) {
             const randomIndex = Math.floor(Math.random() * personalFacts.length);
